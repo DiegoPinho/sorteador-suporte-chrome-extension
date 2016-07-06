@@ -1,0 +1,21 @@
+{
+  "name": "suporte_sorteador",
+  "version": "0.2.0",
+  "description": "Aplicação suporte para ver quem vai atender os suportes",
+  "main": "index.js",
+  "engines": {
+    "node": "4.2.x"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "diegopinho <diego.martins@touchtec.com.br>",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.15.0",
+    "express": "^4.13.4",
+    "mongoose": "^4.4.3",
+    "request": "^2.72.0"
+  }
+}

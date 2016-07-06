@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <script src="/js/requestUtils.js"><!--nada --></script>
+        <script src="/js/sortear.js"><!--nada --></script>
+        <link rel="stylesheet" type="text/css" href="/css/index.css" />
+        <title>Sorteador Suportes</title>
+    </head>
+    <body>
+        <div style="margin-bottom:10px"><a href="/index.html"><<< Voltar</a></div>
+        <div align="center">
+        	<input id="nome" type="hidden" value=""/>
+        	<img src="/imagens/background.png" class="foto" id="foto" />
+            <button class="botao" id="botaoSortear"><span>Sortear</span></button>
+            <button class="botao" id="botaoConfirmar" style="display: none;"><span>Confirmar</span></button>
+        </div>
+
+        <!-- Modal de Confirmação de Envio -->
+        <div id="modalConfirmacao" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <span class="close">×</span>
+                    <h2>Confirmação</h2>
+                </div>
+                <div class="modal-body">
+                    <div id="nomeDoSorteado"><!-- preenchido por js --></div>
+                    <div id="enviarSlack">
+                        <input id="checkSlack" type="checkbox" name="email">Enviar aviso pelo slack</input>
+                    </div>
+                    <div id="enviarEmail">
+                        <input id="checkEmail" type="checkbox" name="email">Enviar e-mail de notificação</input>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="botao" id="botaoConfirmarModal"><span>Confirmar</span></button>
+                </div>
+            </div>
+        </div>
+
+    </body>
+
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Opções - Suporte Sorteador</title>
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
+        <script src="/js/options.js"></script>
+    </head>
+    <body>
+        <h1>Opções Gerais</h1>
+        <table class="simple">
+            <tr>
+              <td valign="center">
+                <div class="opcoes">
+                    <strong>Selecione o seu provedor de e-mail:</strong>
+                    <br /><br />
+                    <label>
+                        <input id="gmail" type="radio" name="mailto" value="gmail" checked="true">Gmail<br>
+                    </label>
+                </div>
+                <div class="opcoes">
+                    <strong>Utilizar contexto da tab como corpo do e-mail?</strong>
+                    <input id="useTabContext" type="checkbox" />
+                </div>
+                <div class="opcoes">
+                    <strong>Assunto padrão do e-mail:</strong>
+                    <br />
+                    <label>
+                        <input id="subject" type="text" style="width:350px"/>
+                    </label>
+                </div>
+              </td>
+            </tr>
+        </table>
+
+        <h1>Opções - Slack</h1>
+        <table class="simple">
+            <tr>
+              <td valign="center">
+                <div class="opcoes">
+                    <strong>Usuário de notificação do Slack</strong>
+                    <br />
+                    <label>
+                        <input id="slack-default" type="text" style="width:350px"/>
+                    </label>
+                </div>
+                <div class="opcoes">
+                    <strong>Url de Integração</strong>
+                    <br />
+                    <label>
+                        <input id="slack-url" type="text" style="width:350px"/>
+                    </label>
+                </div>
+              </td>
+            </tr>
+        </table>
+
+        <button id="botaoConfirmarOpcoes" class="botao"><span>Salvar Opções</span></button>
+    </body>
+</html>

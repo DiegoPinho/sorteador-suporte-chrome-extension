@@ -1,0 +1,18 @@
+{
+  "manifest_version": 2,
+  "name": "Sorteador Suporte",
+  "description": "Extensão para ver quem vai atender aos suportes",
+  "version": "0.2.1",
+  "browser_action": {
+    "default_icon": "/imagens/icone.png",
+    "default_popup": "index.html"
+  },
+  "options_page": "options.html",
+  "permissions": [
+    "<all_urls>", "tabs", "storage"
+  ],
+  "background": {
+    "scripts": ["/js/sortear.js"],
+    "persistent": false
+  }
+ }

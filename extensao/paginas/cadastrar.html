@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <script src="/js/requestUtils.js"><!--nada --></script>
+        <script src="/js/cadastrar.js"><!--nada --></script>
+        <link rel="stylesheet" type="text/css" href="/css/index.css" />
+        <title>Sorteador Suportes</title>
+    </head>
+    <body>
+        <div style="margin-bottom:10px"><a href="/index.html"><<< Voltar</a></div>
+        <div id="candidatosCadastrados" class="info"><p>Nomes já cadastrados:</p></div>
+        <form id="formCadastro">
+            Nome: <input id="nome" type="text" name="nome" required="true" placeholder="seu nome" /><br />
+            Url da Foto: <input id="urlFoto" type="text" name="urlFoto" required="true" placeholder="url do imgur ou google drive" />
+            E-Mail: <input id="email" type="text" name="email" placeholder="seuemail@email.com.br" />
+            Slack: <input id="slack" type="text" name="slack" placeholder="@usuario" />
+            <button class="botao" id="botaoCadastrar">Cadastrar!</button>
+        </form>
+    </body>
+</html>
