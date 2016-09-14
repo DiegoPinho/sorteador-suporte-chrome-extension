@@ -57,6 +57,11 @@ app.get('/cadastrados', function(req,res) {
     })
 });
 
+app.get('/ultimosSorteios', function(req,res) {
+    sorteador.recuperarUltimosSorteios(function(sorteios) {
+        res.send(sorteios);
+    });
+});
 
 app.post('/enviarNotificacaoSlack', function(req,res) {
     var body = req.body;

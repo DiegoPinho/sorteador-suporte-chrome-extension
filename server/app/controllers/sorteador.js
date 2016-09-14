@@ -1,5 +1,6 @@
 var mongoose = require('mongoose');
 var Candidato = require('../models/candidato');
+var Sorteio = require('../models/sorteio');
 
 var sorteador = {
 
@@ -21,11 +22,32 @@ var sorteador = {
         var query = {'nome' : nome};
         Candidato.update(query, {$set : {'atendeuSuporte' : true}}, {}, function(err) {
             if(err) throw err;
-            else callback();
+            else registrarSorteioRealizado(nome, callback);
         })
+    },
+
+    recuperarUltimosSorteios: function(callback) {
+        var query = {};
+        Sorteio.find(query, function(err, sorteios) {
+            if(err) console.log('erro ao recuperar sorteios!');
+            callback(sorteios);
+        }).limit(10).sort({data: 'descending'}); // máximo de resultados
     }
 
 };
+
+function registrarSorteioRealizado(nome, callback) {
+    var sorteio = new Sorteio();
+    sorteio.sorteado = nome;
+    sorteio.data = new Date();
+
+    sorteio.save(function(err) {
+        if(err) console.log('ocorreu um erro no momento de registrar os sorteio!');
+        else {
+            callback();
+        }
+    });
+}
 
 function sortearCandidatos(callback) {
     var query = {'atendeuSuporte':false};

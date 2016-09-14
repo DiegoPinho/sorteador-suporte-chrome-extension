@@ -8,6 +8,10 @@ document.addEventListener('DOMContentLoaded', function () {
         window.location.href = "/paginas/cadastrar.html";
     });
 
+    document.querySelector('#botaoUltimosSorteios').addEventListener('click', function(){
+        window.location.href = '/paginas/ultimosSorteios.html';
+    });
+
     document.querySelector("#engrenagem").addEventListener('click', function(){
         chrome.tabs.create({ url: "/options.html" });
     })
