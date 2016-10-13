@@ -1,6 +1,6 @@
 {
   "name": "suporte_sorteador",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "Aplicação suporte para ver quem vai atender os suportes",
   "main": "index.js",
   "engines": {

@@ -39,7 +39,7 @@ var sorteador = {
 function registrarSorteioRealizado(nome, callback) {
     var sorteio = new Sorteio();
     sorteio.sorteado = nome;
-    sorteio.data = new Date();
+    sorteio.data = new Date().toISOString().replace(/T/,' ').replace(/\..+/,''); //Formato da Data: yyyy-MM-dd HH:mm:ss
 
     sorteio.save(function(err) {
         if(err) console.log('ocorreu um erro no momento de registrar os sorteio!');
